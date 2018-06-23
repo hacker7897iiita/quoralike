@@ -1,12 +1,10 @@
 <html>
 <head>
-	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<style media="screen">
 	#popup
 	{
@@ -18,25 +16,23 @@
 		text-align: center;
 		border-radius: 6px;
 		box-shadow: 0 0 5px 5px #888888;
-	}</style>
-</head>
-<body>
-<?php
-include "connect.php";
-include "header.php";
-session_start();
-if(!isset($_SESSION['login']) || $_SESSION['login'] != 1 )
-{
-	echo '<div id="popup"><h1>Login to Answer</h1></div>';
-}
-else {
-?>
-<textarea resize="none" width"50%" height="300" form="answerForm">Haha</textarea>
-<form action="answer.php" method="POST" id="answerForm">
-<input type="submit" name="answer" value="Upload Answer">
-</form>
-<?php
-}
-?>
-</body>
-</html>
+		}</style>
+	</head>
+	<body>
+		<?php
+		include "connect.php";
+		include "header.php";
+		include "answer/display_questions.php";
+		session_start();
+		display_questions();
+			if(!isset($_SESSION['login']) || $_SESSION['login'] != 1 )
+			{
+				echo '<div id="popup"><h1>Login to Answer</h1></div>';
+			}
+			else {
+
+			}
+
+		?>
+	</body>
+	</html>
