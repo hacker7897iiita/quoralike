@@ -43,25 +43,32 @@
 	}
 	else {
 		?>
-		
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Dropdown button
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">Action</a>
-				<a class="dropdown-item" href="#">Another action</a>
-				<a class="dropdown-item" href="#">Something else here</a>
+		if(isset($_SESSION['']))
+		<form action="question.php" method="POST" id="questionform">
+			<div class="form-group" action="question.php" method="POST" id="questionform">
+				<label for="exampleFormControlSelect1">Topic</label>
+				<select class="form-control" id="exampleFormControlSelect1">
+					<option>ambigous</option>
+					<option>science</option>
+					<option>maths</option>
+					<option>biology</option>
+					<option>movies</option>
+					<option>knowelege</option>
+				</select>
 			</div>
-		</div>
-
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Example textarea</label>
+				<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="write your question" rows="3" form="questionform"></textarea>
+			</div>
+			<button type="submit" name="question" value="Post" class="btn btn-primary"> Post </button>
+		</form>
 
 
 
 		<textarea resize="none" width"50%" height="300" form="questionform" placeholder="write question" name="qtext"></textarea>
 
 		<form action="question.php" method="POST" id="questionform">
-			<input type="submit" name="question" value="Post"/>
+			<input type="submit" name="question"/>
 		</form>
 		<?php
 	}
