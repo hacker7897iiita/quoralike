@@ -8,17 +8,18 @@
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<style media="screen">
-	#popup
-	{
-		margin-right: 25%;
-		margin-left: 25%;
-		margin-top: 80;
-		padding-top: 50;
-		padding-bottom: 50;
-		text-align: center;
-		border-radius: 6px;
-		box-shadow: 0 0 5px 5px #888888;
-	}</style>
+		#popup
+		{
+			margin-right: 25%;
+			margin-left: 25%;
+			margin-top: 80;
+			padding-top: 50;
+			padding-bottom: 50;
+			text-align: center;
+			border-radius: 6px;
+			box-shadow: 0 0 5px 5px #888888;
+		}
+	</style>
 </head>
 <body>
 <?php
@@ -27,7 +28,9 @@ include "header.php";
 session_start();
 if(!isset($_SESSION['login']) || $_SESSION['login'] != 1 )
 {
-	echo '<div id="popup"><h1>Login to Answer</h1></div>';
+?>
+<div id="popup"><h1>Login to Ask a Question</h1></div>
+<?php
 }
 else {
 ?>

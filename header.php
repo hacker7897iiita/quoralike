@@ -5,6 +5,7 @@
  			<div class="nav-wrapper">
  				<a href="feed.php" class="brand-logo">QuoraLike</a>
  				<ul class="right hide-on-med-and-down">
+					<li><a href="question.php">Ask Question</a></li>
  					<li><a href="answer.php">Answer</a></li>
  					<?php
 
