@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <?php 
+  <?php
   session_start();
   include 'login.php';
   include 'signup.php';
@@ -39,18 +39,17 @@
   ?>
 
   <form action="index.php" method="POST">
-    <input type="text" name="username" placeholder="username"/> 
+    <input type="text" name="username" placeholder="username"/>
     <input type="email" name="email" placeholder="email"/>
     <input type="password" name="password" placeholder="password"/>
-    <input type="submit" name="signup" value="Sign Up"/>  
-  </form> 
+    <input type="submit" name="signup" value="Sign Up"/>
+  </form>
   <form action="index.php" method="POST">
     <input type="email" name="email" placeholder="email"/>
     <input type="password" name="password" placeholder="password"/>
-    <input type="submit" name="login" value="login"/>  
+    <input type="submit" name="login" value="login"/>
   </form>
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
-

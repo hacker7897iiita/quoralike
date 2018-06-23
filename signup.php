@@ -9,7 +9,7 @@ function signup($name,$pwd,$email){
 	$ret = mysqli_query($con,$dum);
 	$rows = mysqli_fetch_array($ret);
 	$num_rows = mysqli_num_rows($ret);
-  //echo $num_rows;  
+  //echo $num_rows;
 	if(!$num_rows){
 		$sql = "insert into users (name,password,email) values ('$name', '$pwd', '$email')";
 		$ret = mysqli_query($con,$sql);

@@ -17,11 +17,11 @@
 	session_start();
 	include 'connect.php';
 	if(!isset($_SESSION['login'])){
-		echo "unregisterd user";
+		//echo "unregisterd user";
 	}
 	else if($_SESSION['login'] == 1){
 		$name = $_SESSION['name'];
-		echo "<a href='profile.php'>".$name."</a>"; 
+		//echo "<a href='profile.php'>".$name."</a>"; 
 	}
 	else{
 		echo "unregistered user";
@@ -31,4 +31,3 @@
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
-
