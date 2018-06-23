@@ -18,25 +18,28 @@
 		text-align: center;
 		border-radius: 6px;
 		box-shadow: 0 0 5px 5px #888888;
-	}</style>
-</head>
-<body>
-<?php
-include "connect.php";
-include "header.php";
-session_start();
-if(!isset($_SESSION['login']) || $_SESSION['login'] != 1 )
-{
-	echo '<div id="popup"><h1>Login to Answer</h1></div>';
-}
-else {
-?>
-<textarea resize="none" width"50%" height="300" form="answerForm">Haha</textarea>
-<form action="answer.php" method="POST" id="answerForm">
-<input type="submit" name="answer" value="Upload Answer">
-</form>
-<?php
-}
-?>
-</body>
-</html>
+		}</style>
+	</head>
+	<body>
+		<?php
+		include "connect.php";
+		include "header.php";
+		include "answer/display_questions.php";
+		session_start();
+		display_questions();
+			if(!isset($_SESSION['login']) || $_SESSION['login'] != 1 )
+			{
+				echo '<div id="popup"><h1>Login to Answer</h1></div>';
+			}
+			else {
+				?>
+				<textarea resize="none" width"50%" height="300" form="answerForm" name="answer text">Haha</textarea>
+				<form action="answer.php" method="POST" id="answerForm">
+					<input type="submit" name="answer" value="Upload Answer">
+				</form>
+				<?php
+			}
+
+		?>
+	</body>
+	</html>
