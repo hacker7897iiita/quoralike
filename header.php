@@ -3,7 +3,7 @@
  	<div class="navbar-fixed">
  		<nav>
  			<div class="nav-wrapper">
- 				<a href="#!" class="brand-logo">Logo</a>
+ 				<a href="feed.php" class="brand-logo">QuoraLike</a>
  				<ul class="right hide-on-med-and-down">
  					<li><a href="answer.php">Answer</a></li>
  					<?php
