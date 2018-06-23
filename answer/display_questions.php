@@ -36,6 +36,11 @@ function display_questions()
 	$sql = "select answer,userid from answers where questionid='".$ret['questionid']."'";
 	$row = mysqli_query($con,$sql);
 	$num_ans = mysqli_num_rows($row);
+	for($i2 = 0; $i2 < $num_ans; $i2 ++)
+	{
+		$ret = mysqli_fetch_assoc($row);
+		echo "<br><div class='answerDiv'><p style='font-size:20px; '>".$ret['userid']."</p><p>".$ret['answer']."</p></div>";
+	}
 
 	?>
 </div>
