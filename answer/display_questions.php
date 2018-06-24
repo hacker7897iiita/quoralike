@@ -30,16 +30,28 @@ function display_questions()
 		}
 		</style>
 		<div class="questionDiv">
-			<?php
-			$ret = mysqli_fetch_assoc($row);
-			echo $ret['questiontext'];
-			$qid = $ret['questionid'];
-			?>
-		</div>
-		<?php
+			<div class="container">
+				<div class="row">
+					<div class="col-md-1-1">
+						<p></p>
+					</div>
+					<div class="col-md-10-10" >
+						<p>
+							<?php
+							$ret = mysqli_fetch_assoc($row);
+							echo $ret['questiontext'];
+							?></p>
+						</div>
+						<div class="col-md-1">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+				<?php
 
 
-	}
+			}
 
-}
-?>
+		}
+		?>
