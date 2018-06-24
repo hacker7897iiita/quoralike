@@ -13,10 +13,11 @@ function login($email,$pwd){
 		if($num_rows){
 			$_SESSION['email'] = $email;
 			$_SESSION['login'] = 1;
-			$sql = "select name from users where email = '".$_SESSION['email']."'";
+			$sql = "select name,userid from users where email = '".$_SESSION['email']."'";
 			$row = mysqli_query($con,$sql);
 			$ret = mysqli_fetch_assoc($row);
 			$_SESSION['name'] = $ret['name'];
+			$_SESSION['userid'] = $ret['userid'];
 			header('Location: feed.php');
 		}
 		else{

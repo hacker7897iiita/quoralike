@@ -42,12 +42,18 @@
 		<?php
 	}
 	else {
+		include 'question/uploadquestion.php';
+		if(isset($_POST['question'])){
+			$tname = $_POST['topic'];
+			$question = $_POST['qtext'];
+			uploadquestion($tname,$question);
+		}
+
 		?>
-		if(isset($_SESSION['']))
 		<form action="question.php" method="POST" id="questionform">
 			<div class="form-group" action="question.php" method="POST" id="questionform">
 				<label for="exampleFormControlSelect1">Topic</label>
-				<select class="form-control" id="exampleFormControlSelect1">
+				<select class="form-control" id="exampleFormControlSelect1" name="topic">
 					<option>ambigous</option>
 					<option>science</option>
 					<option>maths</option>
@@ -57,29 +63,11 @@
 				</select>
 			</div>
 			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Example textarea</label>
-				<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="write your question" rows="3" form="questionform"></textarea>
+				<textarea name="qtext" class="form-control" id="exampleFormControlTextarea1" placeholder="write your question" rows="3" form="questionform" ></textarea>
 			</div>
 			<button type="submit" name="question" value="Post" class="btn btn-primary"> Post </button>
 		</form>
-
-
-
-		<textarea resize="none" width"50%" height="300" form="questionform" placeholder="write question" name="qtext"></textarea>
-
-		<form action="question.php" method="POST" id="questionform">
-			<input type="submit" name="question"/>
-		</form>
-		<?php
-	}
-	?>
-	<!--JavaScript at end of body for optimized loading-->
-	<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
-	<select name="carlist" form="questionform">
-		<option value="volvo">Volvo</option>
-		<option value="saab">Saab</option>
-		<option value="opel">Opel</option>
-		<option value="audi">Audi</option>
 	</select>
+<?php } ?>
 </body>
 </html>

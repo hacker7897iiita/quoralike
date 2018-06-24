@@ -23,6 +23,7 @@
  				else if($_SESSION['login'] == 1){
  						//echo $_SESSION['login'];
  					echo "<li class='nav-item'><a class='nav-link' href='logout.php'>Logout</a></li>";
+ 					echo "<li class='nav-item'><a class='nav-link' href='profile.php'>Profile</a></li>";
  				}
  				else{
  						//echo $_SESSION['login'];
